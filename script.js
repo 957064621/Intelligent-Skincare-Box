@@ -1,21 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('container');
   const svg = document.getElementById('my-svg');
   const loadingAnimation = document.getElementById('loading-animation');
-  svg.style.display = 'none';
+
+  svg.style.visibility = 'hidden';
 
   svg.addEventListener('load', () => {
     loadingAnimation.style.display = 'none';
-    svg.style.display = 'block';
-  }
+    svg.style.visibility = 'visible';
 
-  container.addEventListener('scroll', () => {
-    svg.style.transform = `translateY(${container.scrollTop}px)`;
+    const container = document.getElementById('container');
+    container.addEventListener('scroll', () => {
+      svg.style.transform = `translateY(${container.scrollTop}px)`;
+    });
   });
 
-  container.addEventListener('resize', () => {
-    svg.style.height = `${container.scrollHeight}px`;
+  svg.addEventListener('error', () => {
+    loadingAnimation.style.display = 'none';
   });
-
-  svg.style.height = `${container.scrollHeight}px`;
 });
