@@ -144,7 +144,7 @@ button {
   transform: translateX(-50%);
   border: none;
   font-size: 40px;
-  /*font-family: inherit;*/
+  font-family: system-ui;
   color: #fff;
   width: 500px;
   height: 100px;
