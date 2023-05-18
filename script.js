@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     svg.style.visibility = 'visible';
 
     const container = document.getElementById('container');
+    
     container.addEventListener('scroll', () => {
       svg.style.transform = `translateY(${container.scrollTop}px)`;
     });
