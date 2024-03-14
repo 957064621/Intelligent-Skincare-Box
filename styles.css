@@ -211,8 +211,9 @@ button1 {
   transition: 0.5s ease;
   user-select: none;
   position: absolute; /* 设置按钮为相对定位 */
-  top: 8100px; /* 调整按钮的垂直位置 */
-  left: 320px; /* 调整按钮的水平位置 */
+  bottom: 5%; /* 从底部开始定位 */
+  left: 50%; /* 居中 */
+  transform: translateX(-50%); /* 居中 */
 }
 
 #btn:hover,
